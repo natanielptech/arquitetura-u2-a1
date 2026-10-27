@@ -1,0 +1,8 @@
+flowchart LR
+    subgraph Antes["❌ Antes"]
+        N1[Lógica de negócio] --> B1[(MySQL concreto)]
+    end
+    subgraph Depois["✅ Depois"]
+        N2[Lógica de negócio] --> I{{"«interface»<br/>PedidoRepository"}}
+        B2[(Implementação)] -. implementa .-> I
+    end

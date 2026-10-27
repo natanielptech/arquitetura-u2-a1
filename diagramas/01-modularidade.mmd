@@ -1,0 +1,9 @@
+flowchart LR
+    subgraph Antes["❌ Cliente conhece detalhes"]
+        C1[Cliente] --> L[List interna mutável]
+        C1 --> D[Formato do cadastro]
+    end
+    subgraph Depois["✅ Interface estável"]
+        C2[Cliente] --> I{{"CatalogoPedidos"}}
+        I --> Impl[Implementação interna]
+    end

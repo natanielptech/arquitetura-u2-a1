@@ -1,0 +1,8 @@
+stateDiagram-v2
+    [*] --> TestesVerdes
+    TestesVerdes --> PequenaMudanca: escolher smell
+    PequenaMudanca --> RodarTestes
+    RodarTestes --> TestesVerdes: passou · avançar
+    RodarTestes --> Reverter: falhou
+    Reverter --> TestesVerdes
+    TestesVerdes --> [*]: sem mais smells

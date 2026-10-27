@@ -1,0 +1,13 @@
+classDiagram
+    class FuncionarioRuim {
+        +calcularSalario()
+        +gerarRelatorioPdf()
+        +salvarNoBanco()
+    }
+    class Funcionario
+    class CalculadoraSalario
+    class RelatorioFuncionario
+    class FuncionarioRepository
+    CalculadoraSalario ..> Funcionario
+    RelatorioFuncionario ..> Funcionario
+    FuncionarioRepository ..> Funcionario
