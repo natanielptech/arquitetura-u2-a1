@@ -1,0 +1,25 @@
+classDiagram
+    class Trabalhador {
+        <<interface>>
+        +trabalhar()
+        +comer()
+        +dormir()
+    }
+    class Trabalhavel {
+        <<interface>>
+        +trabalhar()
+    }
+    class Alimentavel {
+        <<interface>>
+        +comer()
+    }
+    class Dormivel {
+        <<interface>>
+        +dormir()
+    }
+    class Robo
+    class Humano
+    Trabalhavel <|.. Robo
+    Trabalhavel <|.. Humano
+    Alimentavel <|.. Humano
+    Dormivel <|.. Humano

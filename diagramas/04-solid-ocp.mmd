@@ -1,0 +1,14 @@
+classDiagram
+    class Desconto {
+        <<interface>>
+        +tipo() String
+        +aplicar(valor) double
+    }
+    class DescontoNatal
+    class DescontoBlackFriday
+    class DescontoNovoCliente
+    class CalculadoraDesconto
+    Desconto <|.. DescontoNatal
+    Desconto <|.. DescontoBlackFriday
+    Desconto <|.. DescontoNovoCliente
+    CalculadoraDesconto o--> Desconto

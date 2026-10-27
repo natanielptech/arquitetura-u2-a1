@@ -1,0 +1,4 @@
+flowchart LR
+    App[Aplicação] --> Porta{{"«interface»<br/>GeradorPdf (própria)"}}
+    Adp[AdaptadorBibliotecaPdf] -. implementa .-> Porta
+    Adp --> Lib[(Biblioteca legada)]
